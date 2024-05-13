@@ -8,7 +8,7 @@ import time
 import sys
 
 def show_loading_screen(t):
-    
+
     animation = "|/-\\"
     start_time = time.time()
     while True:

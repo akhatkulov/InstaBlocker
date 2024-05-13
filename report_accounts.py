@@ -51,8 +51,11 @@ def report_accounts(username, accounts_file):
             driver.get("https://www.instagram.com/{}/".format(username))
             show_loading_screen(10)
             # Report user
-            option_button = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//svg[@aria-label='Options']")))
+            print("Bosiladi")
+            option_button = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//svg[@aria-label='Параметры']")))
+            print("Topildi")
             option_button.click()
+            print("bosildi")
             show_loading_screen(10)
             WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//button[text()='Report']")))
             show_loading_screen(3)
